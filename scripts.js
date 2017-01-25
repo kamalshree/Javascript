@@ -71,7 +71,7 @@ function gradeCalculation(name, score) {
     }
 }
 
-gradeCalculation("steve", 34);
+gradeCalculation("steve", 34); //pass by value(a copy is made and those values are passed)
 
 //return
 function returnFunc(x, y) {
@@ -93,3 +93,109 @@ function varScope(localVar) {
 varScope(90);
 document.write("<br/>");
 document.write("The value is " + globalVar);
+
+
+//Arrays
+
+var numbers = [];
+for (var i = 0; i <= 10; i++) {
+    numbers[i] = [i];
+    document.write("<br/>");
+    document.write("The value of " + i + " is " + numbers[i]);
+}
+
+
+//objects creation
+
+var object1 = {
+    name: "xxx",
+    size: 10,
+    color: "green"
+};
+
+document.write("<br/>");
+document.write(" The size is " + object1.size);
+
+
+//object with methods
+
+var family = {
+    daddy: "abc",
+    mother: "xyz",
+    displays: function() {
+        document.write("Daddy and mother are family " + family.daddy);
+    }
+};
+
+document.write("<br/>");
+document.write(family.displays());
+
+//change the datatype of the object property
+family.mother = true;
+
+document.write("<br/>");
+document.write(family.mother);
+
+//add a new property to the object
+family.brother = "none";
+
+document.write("<br/>");
+document.write(family.brother);
+
+//add a new methods
+
+family.priya = function() {
+    document.write("new member added to the family");
+}
+
+document.write("<br/>");
+document.write(family.priya());
+
+delete family.brother;
+document.write("<br/>");
+document.write(family.brother);
+
+//global object string
+var name = "hello how are you";
+//call methods
+document.write("<br/>");
+document.write(name.toUpperCase());
+
+document.write("<br/>");
+document.write("character at " + name.charAt(3));
+
+document.write("<br/>");
+document.write("Replace  " + name.replace('hello', 'hi'));
+
+document.write("<br/>");
+document.write("bold  " + name.bold());
+
+//call properties
+document.write("<br/>");
+document.write(" The length of the string is " + name.length);
+
+
+//math object
+var result = 3.5;
+document.write("<br/>");
+document.write("Rounding" + Math.round(result));
+document.write("<br/>");
+document.write("floor" + Math.floor(result));
+document.write("<br/>");
+document.write("Random" + Math.ceil(Math.random() * 10));
+
+
+//Date object
+var dateValue = new Date();
+
+document.write("<br/>");
+document.write("Date is " + dateValue);
+
+document.write("<br/>");
+document.write("formatted date is " + dateValue.toDateString());
+
+document.write("<br/>");
+document.write("Year is  " + dateValue.getFullYear());
+
+document.write("<br/>");
+document.write("change the Year  " + dateValue.setFullYear(2020));
