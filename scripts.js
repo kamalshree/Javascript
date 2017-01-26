@@ -198,4 +198,44 @@ document.write("<br/>");
 document.write("Year is  " + dateValue.getFullYear());
 
 document.write("<br/>");
-document.write("change the Year  " + dateValue.setFullYear(2020));
+document.write("Date value " + dateValue.getDate());
+
+//DOM
+
+document.write("<br/>");
+
+function changeColor() {
+    var text = document.getElementById("para1").style.color = "red";
+}
+
+function changeStyle(){
+	var result=document.getElementsByTagName("p");
+	for(var i=0;i<result.length;i++){
+		result[i].style.fontStyle="italic";
+	}
+}
+
+function changeFont(){
+	console.log("inside loop");
+	var display=document.getElementsByClassName("div1")[0].style.fontSize="xx-large";
+}
+
+function changeText(){
+	var finalResult=document.getElementById("div2").innerHTML="text changed....."
+//	document.getElementsByClassName("div2")[0].innerHTML="The text as changed";
+}
+
+function combineText(){
+	var text1=document.getElementById("div1").innerHTML;
+	var text2=document.getElementById("div2").innerHTML;
+	var text3=text1+text2;
+	document.getElementById("div3").innerHTML=text3;
+}
+
+function changeImage(){
+	//by ID 
+	//var image1=document.getElementById("image1");
+	//image1.src="c:/kamal/Android/priya.jpg"
+	//by Class Name
+	var img=document.getElementsByClassName("image1")[0].src="c:/kamal/Android/priya.jpg";
+}
