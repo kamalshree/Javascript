@@ -16,3 +16,7 @@ function deleteNumbers(){
 	document.calculator.display.value=newResult;
 }
 
+function addToScreen(x){
+	var displayText=document.getElementById("display")
+	displayText.value+=x;
+}
