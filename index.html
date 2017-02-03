@@ -6,8 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Javascript</title>
-
-
+<style>
+	#addattr{
+	color:#7986CB;
+	font-size:24px;
+	font-style:italic;
+	}
+</style>
 </head>
 <body>
     <p id="para1">The text changes the color  </p>
@@ -18,14 +23,24 @@
 	</div>
 	<div id="div2">the text changes</div>
 	<div id="div3"></div>
+	
+	<p id="par1" onmouseover="changeBackground();" onmouseout="removeBackground();">On MouseOver</p>
+	
+	<div id="text1"></div>
+	
     <button onClick="changeColor();">Color change</button>
 	 <button onClick="changeStyle();">style change</button>
 	 <button onClick="changeFont();">font change</button>
 	 <button onClick="changeText();">Text change</button>
 	 <button onClick="combineText();">combine</button>
+	 <button onClick="childNode();">ChildNode</button>
 	 
-	 <img src="c:/kamal/Android/kamal.jpg" id ="image1" class="image1" />
+	 <img src="c:/kamal/Android/kamal.jpg" id ="image1" class="image1" onMouseOver="changeImageMouse();" onMouseOut="replaceImageMouse();" />
 	 <button onClick="changeImage();">Change Image</button>
+	 
+	 <button onClick="addNewText();">+</button>
+	 <button onClick="removeNewText();">-</button>
+	 <button onClick="addAttr();">Add Attribute</button>
     <script>
     document.write("<br  />");
       document.write("Hello World");

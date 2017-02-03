@@ -239,3 +239,60 @@ function changeImage(){
 	//by Class Name
 	var img=document.getElementsByClassName("image1")[0].src="c:/kamal/Android/priya.jpg";
 }
+
+
+function changeBackground(){
+	document.getElementById("par1").style.backgroundColor="yellow";
+}
+
+function removeBackground(){
+	document.getElementById("par1").style.backgroundColor="";
+}
+
+function changeImageMouse(){
+	document.getElementById("image1").src="c:/kamal/Android/priya.jpg";
+}
+function replaceImageMouse(){
+	document.getElementById("image1").src="c:/kamal/Android/kamal.jpg";
+}
+
+function addNewText(){
+	var element=document.createElement("span");
+	var node =document.getElementById("text1");
+	node.appendChild(element);
+	
+	var createText=document.createTextNode("kamal");
+	element.appendChild(createText);
+}
+
+
+function removeNewText(){
+	var element1=document.getElementsByTagName("span")[0];
+	var parent=element1.parentNode;
+	parent.removeChild(element1);
+}
+
+function addAttr(){
+	var element=document.createElement("span");
+	var node =document.getElementById("text1");
+	node.appendChild(element);
+	
+	var createText=document.createTextNode("kamal");
+	element.appendChild(createText);
+	
+	var pattribute=document.createAttribute("id");
+	pattribute.value="addattr";
+	element.setAttributeNode(pattribute);
+	
+}
+
+function childNode(){
+	var parent =document.getElementById("text1");
+	var child=parent.childNodes[3];
+	child.style.color="red";
+	 var childele=parent.firstElementChild;
+	 childele.style.color="green";
+	  var childlast=parent.lastElementChild;
+	 childlast.style.color="yellow";
+}
+
